@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      // Задание 4
+      // Функция Сложение
+      function add(a, b) {
+        return a + b;
+      }
+      // К примеру
+      alert(add(2, 5)); // ответ: 7
+
+      // Функция Вычитание
+      function sub(a, b) {
+        return a - b;
+      }
+      // К примеру
+      alert(sub(6, 5)); // ответ: 1
+
+      // Функция Умножение
+      function multi(a, b) {
+        return a * b;
+      }
+      // К примеру
+      alert(multi(5, 5)); // ответ: 25
+
+      // Функция Деление
+      function div(a, b) {
+        return a / b;
+      }
+      // К примеру
+      alert(div(10, 5)); // ответ: 2
+
+      // Задание 5
+      /**
+       * @operation - математическая операция принимает значения: add, sub, multi, div
+       */
+      function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+          case "add":
+            return add(arg1, arg2);
+          case "sub":
+            return sub(arg1, arg2);
+          case "multi":
+            return multi(arg1, arg2);
+          case "div":
+            return div(arg1, arg2);
+        }
+      }
+      alert(mathOperation(10, 5, "add")); // ответ: 15
+      alert(mathOperation(10, 5, "sub")); // ответ: 5
+      alert(mathOperation(10, 5, "multi")); // ответ: 50
+      alert(mathOperation(10, 5, "div")); // ответ: 2
+    </script>
+  </body>
+</html>

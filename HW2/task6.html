@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      function sumRub() {
+        let sum = prompt("Введите желаемую сумму");
+        let lastNumber = sum[sum.length - 1];
+        let preLastNumber = sum[sum.length - 2];
+        let word;
+        if (preLastNumber === "1") {
+          word = "рублей";
+        } else if (lastNumber === "1") {
+          word = "рубль";
+        } else if (
+          lastNumber === "2" ||
+          lastNumber === "3" ||
+          lastNumber === "4"
+        ) {
+          word = "рубля";
+        } else {
+          word = "рублей";
+        }
+        alert(`Ваша сумма в ${sum} ${word} успешно зачислена!`);
+      }
+
+      sumRub();
+    </script>
+  </body>
+</html>

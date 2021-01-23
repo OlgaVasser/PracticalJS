@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      /**
+       * У нас есть переменная а со значением 2
+       * Мы расчитываем переменную х, прибавляя к 1 значение в скобках
+       * В скобках происходит присваивание с умножением
+       * что значит, что ( а *= 2) равносильно ( a = a * 2)
+       * Мы видим, что переменной а присвоенно новое значение 4 (2*2)
+       * И можно рассчитать х = 1 + 4 = 5
+       */
+      let a = 2;
+      let x = 1 + (a *= 2);
+      alert(x); // ответ: 5
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      //   class Number {
+      //     constructor(tens, units, hundreds) {
+      //       this.tens = tens;
+      //       this.units = units;
+      //       this.hundreds = hundreds;
+      //     }
+      //   }
+
+      function parseNumber(number) {
+        if (!Number.isInteger(number) || number < 0 || number > 999) {
+          console.log("Вы ввели неверное число!");
+          return {};
+        }
+
+        let units = number % 10;
+        let tens = Math.floor((number % 100) / 10);
+        let hundreds = Math.floor(number / 100);
+
+        return {
+          units,
+          tens,
+          hundreds,
+        };
+      }
+
+      let number = +prompt("Введите целое число от 0 до 999");
+      let obj = parseNumber(number);
+      console.log(obj);
+    </script>
+  </body>
+</html>
